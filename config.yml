@@ -1,0 +1,20 @@
+database:
+  driverClass: org.h2.driver
+  user: sa
+  password: sa
+  url: jdbc:h2:./target/RealWorld
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+logging:
+  level: INFO
+  loggers:
+    io.realworld.conduit: DEBUG
+    org.hibernate.SQL:
+      level: DEBUG
